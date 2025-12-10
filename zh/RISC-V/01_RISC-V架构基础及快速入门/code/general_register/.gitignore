@@ -1,0 +1,12 @@
+**/build/
+**/.vscode/
+**/build_sbi/
+**/build_src/
+**/scripts/
+**/tags
+**/*.o
+**/*.bin
+**/*.map
+**/*.elf
+**/*.asm
+

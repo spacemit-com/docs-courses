@@ -1,0 +1,4 @@
+        /* 使能FS */
+        val = INSERT_FIELD(val, SR_FS, 1);
+
+        write_csr(mstatus, val);
