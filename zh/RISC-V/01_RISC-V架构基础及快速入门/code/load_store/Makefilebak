@@ -1,0 +1,89 @@
+GNU ?= riscv64-linux-gnu
+COPS += -g -O0 -Wall -nostdlib -Iinclude -mcmodel=medany -mabi=lp64 -march=rv64imafd_zifencei -fno-PIE -fno-omit-frame-pointer -Wno-builtin-declaration-mismatch
+
+############################
+#  build s_mode
+############################
+BUILD_ROOT= build
+BUILD_DIR = $(BUILD_ROOT)/s_mode
+SRC_DIR = src
+LIB_DIR = lib
+BUILD_LIB_DIR = $(BUILD_ROOT)/lib
+
+all : clean s_mode.bin m_mode.bin
+
+# Check if verbosity is ON for build process
+CMD_PREFIX_DEFAULT := @
+ifeq ($(V), 1)
+	CMD_PREFIX :=
+else
+	CMD_PREFIX := $(CMD_PREFIX_DEFAULT)
+endif
+
+clean :
+	rm -rf $(BUILD_ROOT)  *.bin  *.map *.elf *.asm
+
+$(BUILD_DIR)/%_c.o: $(SRC_DIR)/%.c
+	$(CMD_PREFIX)mkdir -p $(BUILD_DIR); echo " CC   $@" ; $(GNU)-gcc $(COPS) -c $< -o $@
+
+$(BUILD_DIR)/%_s.o: $(SRC_DIR)/%.S
+	$(CMD_PREFIX)mkdir -p $(BUILD_DIR); echo " AS   $@"; $(GNU)-gcc $(COPS) -c $< -o $@
+
+$(BUILD_LIB_DIR)/%_c.o: $(LIB_DIR)/%.c
+	$(CMD_PREFIX)mkdir -p $(BUILD_LIB_DIR); echo " CC   $@" ; $(GNU)-gcc $(COPS) -c $< -o $@
+
+C_FILES = $(wildcard $(SRC_DIR)/*.c)
+LIB_FILES = $(wildcard $(LIB_DIR)/*.c)
+ASM_FILES = $(wildcard $(SRC_DIR)/*.S)
+
+OBJ_FILES = $(C_FILES:$(SRC_DIR)/%.c=$(BUILD_DIR)/%_c.o)
+OBJ_FILES += $(ASM_FILES:$(SRC_DIR)/%.S=$(BUILD_DIR)/%_s.o)
+OBJ_FILES += $(LIB_FILES:$(LIB_DIR)/%.c=$(BUILD_LIB_DIR)/%_c.o)
+
+DEP_FILES = $(OBJ_FILES:%.o=%.d)
+-include $(DEP_FILES)
+
+# The finally linked kernel.
+s_mode.bin: $(SRC_DIR)/linker.ld $(OBJ_FILES)
+	$(CMD_PREFIX)$(GNU)-ld -T $(SRC_DIR)/linker.ld -o $(BUILD_DIR)/s_mode.elf  $(OBJ_FILES) -Map s_mode.map; echo " LD $(BUILD_DIR)/s_mode.elf"
+	$(CMD_PREFIX)$(GNU)-objcopy $(BUILD_DIR)/s_mode.elf -O binary s_mode.bin; echo " OBJCOPY s_mode.bin"
+	$(CMD_PREFIX)$(GNU)-objdump $(BUILD_DIR)/s_mode.elf -d > s_mode.asm; echo " OBJDUMP s_mode.asm"
+	$(CMD_PREFIX)cp $(BUILD_DIR)/s_mode.elf s_mode.elf
+
+############################
+#  build SBI
+############################
+SBI_BUILD_DIR = $(BUILD_ROOT)/sbi
+SBI_SRC_DIR = sbi
+$(SBI_BUILD_DIR)/%_c.o: $(SBI_SRC_DIR)/%.c
+	$(CMD_PREFIX)mkdir -p $(SBI_BUILD_DIR); echo " CC   $@" ; $(GNU)-gcc $(COPS) -c $< -o $@
+
+$(SBI_BUILD_DIR)/%_s.o: $(SBI_SRC_DIR)/%.S
+	$(CMD_PREFIX)mkdir -p $(SBI_BUILD_DIR); echo " AS   $@"; $(GNU)-gcc $(COPS) -c $< -o $@
+
+SBI_C_FILES = $(wildcard $(SBI_SRC_DIR)/*.c)
+SBI_ASM_FILES = $(wildcard $(SBI_SRC_DIR)/*.S)
+SBI_OBJ_FILES = $(SBI_C_FILES:$(SBI_SRC_DIR)/%.c=$(SBI_BUILD_DIR)/%_c.o)
+SBI_OBJ_FILES += $(SBI_ASM_FILES:$(SBI_SRC_DIR)/%.S=$(SBI_BUILD_DIR)/%_s.o) 
+SBI_OBJ_FILES += $(LIB_FILES:$(LIB_DIR)/%.c=$(BUILD_LIB_DIR)/%_c.o)
+
+# DEP_FILES = $(SBI_OBJ_FILES:%.o=%.d)
+# -include $(DEP_FILES)
+
+m_mode.bin: $(SBI_SRC_DIR)/sbi_linker.ld $(SBI_OBJ_FILES) 
+	$(CMD_PREFIX)$(GNU)-ld -T $(SBI_SRC_DIR)/sbi_linker.ld -o $(SBI_BUILD_DIR)/m_mode.elf  $(SBI_OBJ_FILES) -Map m_mode.map; echo " LD $(SBI_BUILD_DIR)/m_mode.elf"
+	$(CMD_PREFIX)$(GNU)-objcopy $(SBI_BUILD_DIR)/m_mode.elf -O binary m_mode.bin; echo " OBJCOPY m_mode.bin"
+	$(CMD_PREFIX)$(GNU)-objdump $(SBI_BUILD_DIR)/m_mode.elf -d > m_mode.asm; echo " OBJDUMP m_mode.asm"
+	$(CMD_PREFIX)cp $(SBI_BUILD_DIR)/m_mode.elf m_mode.elf
+
+############################
+#  run qemu
+############################
+
+QEMU_FLAGS  += -nographic -machine virt -m 128M 
+QEMU_BIOS = -bios m_mode.bin  -device loader,file=s_mode.bin,addr=0x80200000 
+run:
+	qemu-system-riscv64 $(QEMU_FLAGS) $(QEMU_BIOS) -kernel s_mode.elf
+debug:
+	qemu-system-riscv64 $(QEMU_FLAGS) $(QEMU_BIOS) -kernel s_mode.elf --gdb tcp::1235 -S
+
