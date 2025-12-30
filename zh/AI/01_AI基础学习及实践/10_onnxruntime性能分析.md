@@ -1,14 +1,20 @@
-# 1. 性能分析概述
+# Onnxruntime 性能分析概述
+
 可以通过onnxruntime性能工具获取整模型性能，如有需要，可以进一步开启onnxruntime profiling，获取算子级的性能分析报告
-# 2. 整模型性能分析
+
+## 整模型性能分析
+
 在k1上可以使用onnxruntime_perf_test工具测试模型性能，并通过开启profiling功能获取算子级别的性能分析报告。
 
 下载测试模型文件: [yolov6p5_n.q.onnx](code/yolov6p5_n.q.onnx)
+
 ```bash
 # example
 onnxruntime_perf_test yolov6p5_n.q.onnx -x 4 -r 10 -e spacemit -p yolov6 -I
 ```
+
 结果如下所示
+
 ```bash
 using SpaceMITExecutionProvider
 Setting intra_op_num_threads to 4
@@ -33,12 +39,14 @@ P99 Latency: 0.049022 s
 P999 Latency: 0.049022 s
 ```
 
-# 3. 使用profiling
+## 使用profiling
+
 用户也可以在编写相关程序的过程手动开启profiling功能，获取模型运行的性能分析报告。
 
-#### Python
+### Python
 
 配置环境
+
 ```bash
 sudo apt install libsleef3
 sudo apt install python3-virtualenv
@@ -55,7 +63,9 @@ pip config set global.extra-index-url https://git.spacemit.com/api/v4/projects/3
 pip install numpy==1.26.4
 pip install onnxruntime==1.20.0
 ```
+
 运行下面的demo程序
+
 ```python
 import numpy as np
 import onnxruntime as ort
@@ -92,19 +102,21 @@ print("Performance profile saved to:", prof_file)
 ```
 
 输出内容如下，当前目录下会有一个test_profile_ 开头的性能分析文件，可查看具体的性能分析结果：
+
 ```bash
 inputs_name: images
 inputs_shape: [1, 3, 320, 320]
 Performance profile saved to: test_profile_2024-12-31_10-15-00.json
 ```
 
-# 4. Profiling文件分析
+## Profiling文件分析
+
 通过onnxruntime_perf_test工具或者代码中手动开启profile工具之后，您可以获得对应的json格式的profiling文件，我们推荐将profiling文件传输到PC端，然后在PC端打开[Perfetto工具](https://www.ui.perfetto.dev/)对profiling文件进行分析。
 
 将json文件滑动至页面或者点按按钮打开本地文件，拖动如下时间轴：
 <center>
     <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
     src="images/profiling_1.png">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
@@ -116,7 +128,7 @@ Performance profile saved to: test_profile_2024-12-31_10-15-00.json
 以下为选定算子后的显示实例：
 <center>
     <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
     src="images/profiling_2.png">
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;
@@ -127,7 +139,7 @@ Performance profile saved to: test_profile_2024-12-31_10-15-00.json
 
 <center>
     <img style="border-radius: 0.3125em;
-    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
+    box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);"
     src="images/profiling_3.png", height=400>
     <br>
     <div style="color:orange; border-bottom: 1px solid #d9d9d9;

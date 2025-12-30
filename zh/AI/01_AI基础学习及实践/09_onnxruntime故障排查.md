@@ -1,15 +1,17 @@
-﻿# 1. onnxruntime故障排查
+﻿# onnxruntime 故障排查
 
 当使用onnxruntime遇到问题时，可以采取以下步骤进行故障排查：
 
-## 1.1 环境与模型检查
+## 环境与模型检查
 
 确保你的开发和运行环境已经正确安装并配置了所有必要的依赖项，包括onnxruntime及其版本是否与你的项目兼容。确认onnx模型文件没有损坏。使用 onnx.checker 检查模型的有效性，确保模型符合 ONNX 标准。
 
 点击ctrl+alt+t打开终端，输入以下命令安装onnx
+
 ```bash
 sudo apt install python3-onnx -y
 ```
+
 运行下列代码，可以检查onnx模型是否规范。首先复制以下命令粘贴到终端点击确定:
 
 ```bash
@@ -17,6 +19,7 @@ sudo mkdir -p /usr/local/share/onnx_model && sudo wget -O /usr/local/share/onnx_
 ```
 
 然后在终端输入python点击确定，然后复制下面代码到终端，点击运行：
+
 ```python
 import onnx
 model = onnx.load("/usr/local/share/onnx_model/yolo11n-pose.onnx")
@@ -35,7 +38,7 @@ onnx.checker.check_model(model)
     padding: 2px;"> 图 1.1 </div>
 </center>
 
-## 1.2 尝试定位问题
+## 尝试定位问题
 
 - 简化问题
 
@@ -57,11 +60,10 @@ onnx.checker.check_model(model)
 
    查阅官方文档，了解是否有类似问题的解决方案。访问进迭时空论坛，看看其他用户是否遇到了相同的问题，并查找解决方案。
 
-## 1.3 联系支持或贡献社区
+## 联系支持或贡献社区
 
    如果以上步骤都无法解决问题，考虑联系onnxruntime的开发者或进迭时空开发团队寻求帮助。也可以考虑为项目贡献，提交bug报告或提出改进意见。
 
-# 2. 总结
+## 总结
 
    通过上述方法，你应该能够有效地对onnxruntime中遇到的问题进行排查和解决。如果问题仍然存在，提供详细的错误信息和上下文对于获得外部帮助是非常有帮助的。
-
