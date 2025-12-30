@@ -1,3 +1,5 @@
+sidebar_position: 1
+
 # Linux 驱动开发环境介绍及搭建
 
 ## 1. 硬件描述

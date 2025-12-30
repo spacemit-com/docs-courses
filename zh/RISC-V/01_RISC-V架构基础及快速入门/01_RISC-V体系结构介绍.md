@@ -1,3 +1,5 @@
+sidebar_position: 1
+
 # 1. RISC-V介绍
 
 <div align=center>

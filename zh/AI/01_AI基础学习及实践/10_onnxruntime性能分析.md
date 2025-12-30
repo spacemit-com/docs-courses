@@ -1,3 +1,5 @@
+sidebar_position: 10
+
 # Onnxruntime 性能分析概述
 
 可以通过onnxruntime性能工具获取整模型性能，如有需要，可以进一步开启onnxruntime profiling，获取算子级的性能分析报告

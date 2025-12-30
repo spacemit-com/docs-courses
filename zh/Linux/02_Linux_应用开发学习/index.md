@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # Linux 应用开发学习
 
 1. [开发环境搭建](01_开发环境搭建.md)

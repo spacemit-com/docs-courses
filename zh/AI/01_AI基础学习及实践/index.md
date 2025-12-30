@@ -1,4 +1,6 @@
-# AI基础学习及实践
+sidebar_position: 1
+
+# AI 基础学习及实践
 
 1. [Python 环境搭建](01_Python环境搭建.md)
 2. [C++ 环境搭建](02_C++环境搭建.md)

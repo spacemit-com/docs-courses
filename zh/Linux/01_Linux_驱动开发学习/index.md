@@ -1,3 +1,5 @@
+sidebar_position: 1
+
 # Linux 驱动开发学习
 
 1. [Linux 驱动开发环境介绍及搭建](00_Linux%20驱动开发环境介绍及搭建.md)

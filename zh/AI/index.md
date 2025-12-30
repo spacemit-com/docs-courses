@@ -1,3 +1,5 @@
+sidebar_position: 3
+
 # AI
 
 - [AI基础学习及实践](./01_AI基础学习及实践/index.md)

@@ -1,3 +1,5 @@
+sidebar_position: 20
+
 # 1. 指令集架构（ISA）
 
 ### **RISC-V：**

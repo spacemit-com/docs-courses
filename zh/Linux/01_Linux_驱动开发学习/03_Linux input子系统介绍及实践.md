@@ -1,3 +1,5 @@
+sidebar_position: 4
+
 # Linux input 子系统介绍及实践
 
 ## 1. input 子系统概述

@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # **1. Shell 简介**
 
 ## **1.1 什么是 Shell**

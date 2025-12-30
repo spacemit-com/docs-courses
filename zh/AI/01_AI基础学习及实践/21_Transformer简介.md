@@ -1,3 +1,5 @@
+sidebar_position: 21
+
 # 1. Transformer简介
 
 Transformer 是一种基于注意力机制（Attention）的深度学习模型架构，最初由 Vaswani 等人在 2017 年的论文《Attention Is All You Need》中提出。Transformer 在自然语言处理（NLP）领域不可或缺，并成为当前最流行的架构之一，广泛应用于文本生成、机器翻译、语音识别等任务。

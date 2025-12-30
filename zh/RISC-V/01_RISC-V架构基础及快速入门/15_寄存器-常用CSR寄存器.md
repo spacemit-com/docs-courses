@@ -1,3 +1,5 @@
+sidebar_position: 15
+
 # 1. **CSR的作用与分类**
 CSR（Control and Status Registers）是RISC-V体系结构中的一组特殊寄存器，主要用于控制处理器状态、管理中断与异常、以及提供性能监控等功能。CSR被分为以下三种模式级别：
 1. 用户模式（u-mode）

@@ -1,3 +1,5 @@
+sidebar_position: 1
+
 # RISC-V 架构基础及快速入门
 
 1. [RISC-V 体系结构介绍](01_RISC-V体系结构介绍.md)

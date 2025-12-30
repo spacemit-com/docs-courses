@@ -1,3 +1,5 @@
+sidebar_position: 7
+
 # Linux I2C 设备驱动开发实践
 
 ## 1. I2C 基础知识

@@ -1,4 +1,6 @@
-﻿# 进迭时空 Model zoo
+﻿sidebar_position: 8
+
+# 进迭时空 Model zoo
 
 进迭时空 AI model zoo 收录了受官方加速支持的各类模型，仓库地址位于https://archive.spacemit.com/spacemit-ai/ModelZoo/
 

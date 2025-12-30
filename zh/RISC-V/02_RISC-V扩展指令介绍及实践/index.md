@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # RISC-V 扩展指令介绍及实践
 
 1. [Vector 优化简介](01_Vector优化简介.md)
