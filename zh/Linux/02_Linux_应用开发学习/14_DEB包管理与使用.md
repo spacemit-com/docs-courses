@@ -1,3 +1,5 @@
+sidebar_position: 14
+
 # 1. 什么是DEB包
 
 DEB包是Linux系统中用于软件管理和分发的标准化包格式，主要用于基于Debian的发行版（如Ubuntu、Debian本身、Linux Mint等）。它为用户提供了一种便捷的方式来安装、升级、卸载和管理软件。

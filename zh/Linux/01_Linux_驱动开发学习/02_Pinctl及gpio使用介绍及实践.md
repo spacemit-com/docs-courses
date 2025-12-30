@@ -1,3 +1,5 @@
+sidebar_position: 3
+
 # Pinctrl及GPIO使用介绍及实践
 
 ## 1. Pinctrl 子系统

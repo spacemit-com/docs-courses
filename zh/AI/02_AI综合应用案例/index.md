@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # AI 综合应用案例
 
 1. [AI 聊天机器人](01_AI聊天机器人.md)

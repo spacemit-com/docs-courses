@@ -1,3 +1,5 @@
+sidebar_position: 6
+
 # Linux PWM 驱动开发实践
 
 ## 1. PWM 驱动简析

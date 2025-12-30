@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # Linux
 
 - [Linux 驱动开发学习](./01_Linux_驱动开发学习/index.md)

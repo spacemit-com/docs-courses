@@ -1,3 +1,5 @@
+sidebar_position: 2
+
 # Linux LED驱动开发及实验
 
 ## 1. LED 驱动开发基础

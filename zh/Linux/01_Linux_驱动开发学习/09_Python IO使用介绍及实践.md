@@ -1,3 +1,5 @@
+sidebar_position: 10
+
 # Python IO 使用介绍及实践
 
 我们为 MUSE Pi Pro 适配了 `gpiozero` 库,通过该库，您可以使用 Python 脚本方便地控制 GPIO 设备，该库的完整文档位于`gpiozero.readthedocs.io`。在实际的使用中，您应该特别注意GPIO引脚的编号和引脚的特殊功能，这些设备的引脚编号与树莓派的教程有所不同。接下来以基于 40 pin 的 MUSE Pi Pro 为例引导您如何使用 `gpiozero` 库。

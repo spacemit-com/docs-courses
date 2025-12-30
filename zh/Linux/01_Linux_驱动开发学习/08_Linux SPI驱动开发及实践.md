@@ -1,3 +1,5 @@
+sidebar_position: 9
+
 # Linux SPI 设备驱动开发实践
 
 ## 1. SPI 基础知识

@@ -1,3 +1,5 @@
+sidebar_position: 1
+
 # Python 环境搭建
 
 ## 1. 什么是 Python？

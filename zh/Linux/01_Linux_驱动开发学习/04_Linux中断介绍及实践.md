@@ -1,3 +1,5 @@
+sidebar_position: 5
+
 # Linux 中断介绍及实践
 
 ## 1. 中断基础概念

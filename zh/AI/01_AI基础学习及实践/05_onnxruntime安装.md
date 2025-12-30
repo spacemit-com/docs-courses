@@ -1,4 +1,6 @@
-﻿# ONNX Runtime 安装
+﻿sidebar_position: 5
+
+# ONNX Runtime 安装
 
 Onnxruntime是由微软推出，用于优化和加速机器学习推理和训练，适用于ONNX模型，是一个跨平台推理和训练机器学习加速器。借助进迭时空团队适配的onnxruntime，可以充分利用k1芯片2T的AI算力。以下是几种可以在进迭时空k1芯片端安装onnxruntime的方法：
 

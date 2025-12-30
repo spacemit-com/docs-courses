@@ -1,3 +1,5 @@
+sidebar_position: 1
+
 # RISC-V
 
 - [RISC-V 架构基础及快速入门](./01_RISC-V架构基础及快速入门/index.md)

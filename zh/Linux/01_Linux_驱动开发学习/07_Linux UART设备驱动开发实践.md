@@ -1,3 +1,5 @@
+sidebar_position: 8
+
 # Linux UART 设备驱动开发实践
 
 ## 1. UART 基础知识
