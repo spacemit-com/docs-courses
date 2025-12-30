@@ -16,15 +16,15 @@ Python 是一种解释型语言，运行 Python 代码需要 Python 解释器。
 
 以下是验证系统是否已安装 Python 解释器的步骤。
 
-### **步骤 1：打开终端**
+### 步骤 1：打开终端
 
 点击终端图标打开终端，如下图。
 ![alt text](./images/image.png)
 
 如果终端出现了如下图的打印，输入数字 **2** 即可。
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
-### **步骤 2：检查 Python 版本**
+### 步骤 2：检查 Python 版本
 
 在终端输入以下命令并按回车键（Enter）执行：
 
@@ -41,7 +41,7 @@ python --version
 
 确认 Python 已安装后，可以运行 Python 程序。下面示范如何创建并运行一个简单的猜数字游戏。
 
-### **步骤 1：创建 Python 文件**
+### 步骤 1：创建 Python 文件
 
 如图 3.1，在终端输入以下命令创建 `random_game.py` 文件并使用默认编辑器 Mousepad（如下图）打开：
 
@@ -54,7 +54,7 @@ mousepad random_game.py
 
 ![alt text](./images/image-3.png)
 
-### **步骤 2：编写代码**
+### 步骤 2：编写代码
 
 将以下代码复制到 `random_game.py` 文件中， 如下图。
 
@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
 ![Random Game in Python](./images/image-4.png)
 
-### **步骤 3：保存并退出**
+### 步骤 3：保存并退出
 
 保存文件（操作如下图）
 ![Save](./images/image-5.png)
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 并关闭编辑器（操作下图）
 ![Close](./images/image-6.png)
 
-### **步骤 4：运行 Python 程序**
+### 步骤 4：运行 Python 程序
 
 在终端输入以下命令运行 Python 代码，开始游戏（操作如下图）：
 
@@ -119,7 +119,7 @@ python random_game.py
 
 Python 虚拟环境可以创建一个独立的 Python 环境，以防止不同项目的库发生冲突， 步骤如下：
 
-### **步骤 1：安装 Python 虚拟环境工具**
+### 步骤 1：安装 Python 虚拟环境工具
 
 如下图，在终端执行以下命令安装 `python3-venv` 软件包。
 
@@ -138,7 +138,7 @@ python -m venv -h
 如果终端输出 `venv` 相关的帮助信息（如下图），说明 Python 虚拟环境安装成功。
 ![virtual Env](./images/image-9.png)
 
-### **步骤 2：创建虚拟环境**
+### 步骤 2：创建虚拟环境
 
 如图 4.3，在终端输入以下命令创建 `python_venv` 目录并生成 Python 虚拟环境：
 
@@ -148,7 +148,7 @@ python -m venv python_venv
 
 ![Create new dir](./images/image-10.png)
 
-### **步骤 3：激活虚拟环境**
+### 步骤 3：激活虚拟环境
 
 如下图，在终端输入以下命令激活虚拟环境：
 
@@ -168,7 +168,7 @@ python -m site
 
 ![venv dir verification](./images/image-12.png)
 
-### **步骤 4：安装依赖库**
+### 步骤 4：安装依赖库
 
 虚拟环境与系统环境隔离，初始化完成后是没有安装任何模块的，如果运行 Python 程序（示例，运行以下程序）时报错 `ModuleNotFoundError` （如下图），说明缺少依赖库，例如 `numpy`。
 
@@ -178,7 +178,7 @@ python -c "import numpy"
 
 ![ErrorFound](./images/image-13.png)
 
-#### **安装 numpy 库**
+#### 安装 numpy 库
 
 在虚拟环境中，可以使用 pip 命令安装 numpy 库。由于 pip 默认使用的源在外网，可能因网络不稳定而导致下载失败。因此，我们使用 `-i` 选项指定 pip 使用进迭时空提供的 pypi 源（如下图）
 
@@ -198,7 +198,7 @@ python -c "import numpy"
 
 如果没有报错（如上图），说明 `numpy` 安装成功。
 
-### **步骤 5：退出虚拟环境**
+### 步骤 5：退出虚拟环境
 
 在虚拟环境中安装的 Python 库仅能在该环境中使用。使用以下命令退出虚拟环境(如下图)：
 

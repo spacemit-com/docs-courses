@@ -4,9 +4,7 @@
 
 本指南面向希望部署 ONNX 模型进行图像分类任务的开发者。假设读者具备基本的 Python 编程和机器学习概念知识，但不需要有 ONNX Runtime 的使用经验。
 
----
-
-## 1.1 依赖安装
+## 依赖安装
 
 在运行 ONNX 模型之前，需要安装必要的依赖项。
 
@@ -19,11 +17,9 @@ sudo apt install python3-opencv
 
 更新和安装结果如下图。
 
-![alt text](07-image.png)
+![alt text](./images/07-image.png)
 
----
-
-## 1.2 准备模型部署代码
+## 准备模型部署代码
 
 准备以下代码，以便后续拷贝到对应的运行程序中
 
@@ -110,16 +106,14 @@ img_path = 'classification/kitten.jpg'
 predict(img_path)
 ```
 
----
-
-## 1.3 执行指南
+## 执行指南
 
 ### 第 1 步：准备环境
 
 运行代码之前，请确保您已经：
 
 1. 安装了 Python 3.x
-2. 使用 **第 1.1 节** 中的命令安装了所需软件包
+2. 进行 **[依赖安装](#依赖安装)** 中的命令安装了所需软件包
 3. 为项目创建了工作目录
 
 ### 第 2 步：下载并解压资源  
@@ -139,7 +133,7 @@ ls classification/
 ```
 
 如下图，解压后目录结构如下：
-![alt text](07-image-1.png)
+![alt text](./images/07-image-1.png)
 
 ```
 classification/
@@ -164,7 +158,7 @@ touch model_deploy.py
 ```
 
 如下图，此例子的项目目录为 **onnx**
-![alt text](07-image-2.png)
+![alt text](./images/07-image-2.png)
 
 ### 第 4 步：运行推理脚本
 
@@ -178,7 +172,7 @@ python3 model_deploy.py
 
 如果成功，你应该会看到类似的输出如下图：
 
-![alt text](07-image-3.png)
+![alt text](./images/07-image-3.png)
 
 ### 第 5 步：解释结果
 

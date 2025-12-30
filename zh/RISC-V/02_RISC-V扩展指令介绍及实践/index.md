@@ -1,8 +1,8 @@
 # RISC-V 扩展指令介绍及实践
 
 1. [Vector 优化简介](01_Vector优化简介.md)
-2. [RISC-V-Vector 拓展特点](./02_RISC-V-Vector拓展特点.md)
-3. [RISC-V-Vector 指令功能讲解](03_RISC-V-Vector指令功能讲解.md)
+2. [RISC-V Vector 拓展特点](02_RISC-V-Vector拓展特点.md)
+3. [RISC-V Vector 指令功能讲解](03_RISC-V-Vector指令功能讲解.md)
 4. [AI 指令介绍](04_AI指令介绍.md)
 5. [访存层级及流水线](05_访存层级及流水线.md)
 6. [一维向量优化案例](06_一维向量优化案例.md)

@@ -1,8 +1,8 @@
-﻿# 1. onnxruntime安装
+﻿# ONNX Runtime 安装
 
-onnxruntime是由微软推出，用于优化和加速机器学习推理和训练，适用于ONNX模型，是一个跨平台推理和训练机器学习加速器。借助进迭时空团队适配的onnxruntime，可以充分利用k1芯片2T的AI算力。以下是几种可以在进迭时空k1芯片端安装onnxruntime的方法：
+Onnxruntime是由微软推出，用于优化和加速机器学习推理和训练，适用于ONNX模型，是一个跨平台推理和训练机器学习加速器。借助进迭时空团队适配的onnxruntime，可以充分利用k1芯片2T的AI算力。以下是几种可以在进迭时空k1芯片端安装onnxruntime的方法：
 
-## 1.1 安装
+## 安装
 
 - python
 
@@ -18,7 +18,7 @@ bianbu系统已经预装了onnxruntime，或者您可以通过以下命令直接
 sudo apt install onnxruntime
 ```
 
-## 1.2 验证安装
+## 验证安装
 
 安装完成后，建议验证 ONNX Runtime 是否正确安装。可以进行简单的测试：
 
