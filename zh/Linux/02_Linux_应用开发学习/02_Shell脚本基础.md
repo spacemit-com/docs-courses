@@ -70,7 +70,7 @@ bash hello.sh
 
 ### **2.1.1 定义局部变量**
 
-在 Shell 脚本里，局部变量是在脚本内部定义，仅在脚本内部使用的变量。定义变量时，变量名和变量值之间不能有空格。比如，定义一个名为`name`的变量，值为`Tom` [点击下载示例代码](code/02_Shell/2-1-variable/)：
+在 Shell 脚本里，局部变量是在脚本内部定义，仅在脚本内部使用的变量。定义变量时，变量名和变量值之间不能有空格。比如，定义一个名为`name`的变量，值为`Tom` [点击下载示例代码](https://cdn-resource.spacemit.com/file/event/2-1-variable.zip)：
 
 ```bash
 #!/bin/bash
@@ -127,7 +127,7 @@ mkdir $dir_name
 echo $PATH
 ```
 
-如果想在脚本里临时修改`PATH`变量，添加一个新的路径，示例如下[点击下载](code/02_Shell/2-1-variable/env_variable.sh)：
+如果想在脚本里临时修改`PATH`变量，添加一个新的路径，示例如下[点击下载](https://cdn-resource.spacemit.com/file/event/env_variable.sh)：
 
 ```bash
 #!/bin/bash
@@ -167,7 +167,7 @@ echo "整体参数是：$*"
 echo "参数列表是：$@"
 ```
 
-保存脚本为`param.sh` [点击下载](code/02_Shell/2-1-variable/param.sh)，执行时传递参数：
+保存脚本为`param.sh` [点击下载](https://cdn-resource.spacemit.com/file/event/param.sh)，执行时传递参数：
 
 ```bash
 bash param.sh apple banana
@@ -268,7 +268,7 @@ echo ${fruits[@]}
 - 用**双引号定义**的字符串，其中的变量会被替换成实际值；
 - **不使用引号定义**时，适用于简单的字符串，且字符串中不能包含空格等特殊字符。
 
-示例如下[点击下载](code/02_Shell/2-3-string/define_str.sh)：
+示例如下[点击下载](https://cdn-resource.spacemit.com/file/event/2-3-string/define_str.sh)：
 
 ```bash
 #!/bin/bash
@@ -312,7 +312,7 @@ result=$str1$str2
 echo $result
 ```
 
-结合字符串拼接和长度示例代码[点击下载](code/02_Shell/2-3-string/use_str.sh)，执行结果如图2.3.2所示：
+结合字符串拼接和长度示例代码[点击下载](https://cdn-resource.spacemit.com/file/event/2-3-string/use_str.sh)，执行结果如图2.3.2所示：
 <center>
     <img style="border-radius: 0.3125em;
     box-shadow: 0 2px 4px 0 rgba(34,36,38,.12),0 2px 10px 0 rgba(34,36,38,.08);" 
@@ -325,7 +325,7 @@ echo $result
 </center>
 
 
-查找子字符串可以使用`grep`命令，比如查找字符串`"Hello, world!"`中是否包含`"world"`，[点击下载示例代码](code/02_Shell/2-3-string/search_str.sh)：
+查找子字符串可以使用`grep`命令，比如查找字符串`"Hello, world!"`中是否包含`"world"`，[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/2-3-string/search_str.sh)：
 
 ```bash
 #!/bin/bash
@@ -357,7 +357,7 @@ fi
 
 顺序结构是 Shell 脚本中最基本的执行结构，它按照脚本中命令出现的先后顺序依次执行。在顺序结构中，脚本从第一行命令开始，逐行执行，直到脚本的最后一行。
 
-示例[点击下载](code/02_Shell/3-1-sequential/)：
+示例[点击下载](https://cdn-resource.spacemit.com/file/event/3-1-sequential.zip)：
 
 ```bash
 #!/bin/bash
@@ -419,7 +419,7 @@ fi
 </center>
 
 
-还可以使用逻辑运算符（`&&`表示逻辑与，`||`表示逻辑或）连接多个条件。比如判断一个数是否在 10 到 20 之间[点击下载示例代码](code/02_Shell/3-2-conditional/logical.sh)：
+还可以使用逻辑运算符（`&&`表示逻辑与，`||`表示逻辑或）连接多个条件。比如判断一个数是否在 10 到 20 之间[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-2-conditional/logical.sh)：
 
 ```bash
 #!/bin/bash
@@ -460,7 +460,7 @@ case 变量 in
 esac
 ```
 
-例如，根据用户输入的选项执行不同操作[点击下载示例代码](code/02_Shell/3-2-conditional/case.sh)：
+例如，根据用户输入的选项执行不同操作[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-2-conditional/case.sh)：
 
 ```bash
 #!/bin/bash
@@ -509,7 +509,7 @@ for 变量 in 列表; do
 done
 ```
 
-例如，遍历一个水果列表并输出每个水果[点击下载示例代码](code/02_Shell/3-3-loop/for_array.sh)：
+例如，遍历一个水果列表并输出每个水果[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-3-loop/for_array.sh)：
 
 ```bash
 #!/bin/bash
@@ -538,7 +538,7 @@ for (( 初始值; 条件; 增量 )); do
 done
 ```
 
-比如，从 1 到 5 进行计数并输出[点击下载示例代码](code/02_Shell/3-3-loop/for_num.sh)：
+比如，从 1 到 5 进行计数并输出[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-3-loop/for_num.sh)：
 
 ```bash
 #!/bin/bash
@@ -567,7 +567,7 @@ while [ 条件判断 ]; do
 done
 ```
 
-例如，计算 1 到 10 的累加和[点击下载示例代码](code/02_Shell/3-3-loop/while.sh)：
+例如，计算 1 到 10 的累加和[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-3-loop/while.sh)：
 
 ```bash
 #!/bin/bash
@@ -602,7 +602,7 @@ until [ 条件判断 ]; do
 done
 ```
 
-例如，同样计算 1 到 10 的累加和[点击下载示例代码](code/02_Shell/3-3-loop/until.sh)：
+例如，同样计算 1 到 10 的累加和[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-3-loop/until.sh)：
 
 ```bash
 #!/bin/bash
@@ -652,7 +652,7 @@ say_hello() {
 
 ## **4.2 使用函数**
 
-定义好函数后，就可以在脚本中调用它。调用函数很简单，直接使用函数名即可，[点击下载示例代码](code/02_Shell/4-2-function/say_hello.sh)。例如：
+定义好函数后，就可以在脚本中调用它。调用函数很简单，直接使用函数名即可，[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/3-3-loop/until.sh)。例如：
 
 ```bash
 #!/bin/bash
@@ -675,7 +675,7 @@ say_hello
     padding: 2px;"> 图4.2.1 调用函数</div>
 </center>
 
-运行上述脚本，会输出 “Hello, everyone!”。函数还可以接收参数，在函数内部通过`$1`、`$2`等特殊变量来获取传递的参数，和脚本接收参数的方式类似。下面是一个带参数的函数示例[点击下载](code/02_Shell/4-2-function/sum.sh)，该函数用于计算两个数的和：
+运行上述脚本，会输出 “Hello, everyone!”。函数还可以接收参数，在函数内部通过`$1`、`$2`等特殊变量来获取传递的参数，和脚本接收参数的方式类似。下面是一个带参数的函数示例[点击下载](https://cdn-resource.spacemit.com/file/event/4-2-function/sum.sh)，该函数用于计算两个数的和：
 
 ```bash
 #!/bin/bash
@@ -701,7 +701,7 @@ sum 5 3
 
 在这个脚本中，`sum`函数接收两个参数，通过`$1`和`$2`获取这两个参数的值，计算它们的和并输出结果。运行脚本后，会输出 “两数之和为：8”。
 
-函数还可以有返回值，在 Shell 脚本中，函数的返回值通过`return`命令来指定，返回值是一个整数，范围是 0 - 255。0 通常表示成功，非 0 表示失败。例如[点击下载示例代码](code/02_Shell/4-2-function/check_number.sh)：
+函数还可以有返回值，在 Shell 脚本中，函数的返回值通过`return`命令来指定，返回值是一个整数，范围是 0 - 255。0 通常表示成功，非 0 表示失败。例如[点击下载示例代码](https://cdn-resource.spacemit.com/file/event/4-2-function/check_number.sh)：
 
 ```bash
 #!/bin/bash
@@ -783,7 +783,7 @@ echo -e "第一行\n第二行"
 
 `awk`是一种强大的文本处理工具，它擅长从文本数据中提取字段、进行计算和格式化输出。`awk`的基本语法是`awk [选项] '模式 {动作}' [文件]`。
 
-假设有一个名为`data.txt`的文件[点击下载文件](code/02_Shell/5-2-text/data.txt)，内容如下：
+假设有一个名为`data.txt`的文件[点击下载文件](https://cdn-resource.spacemit.com/file/event/5-2-text/data.txt)，内容如下：
 
 ```plaintext
 Alice 25 Engineer

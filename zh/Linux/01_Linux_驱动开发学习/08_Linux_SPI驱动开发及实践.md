@@ -714,7 +714,7 @@ ls /proc/device-tree/soc/spi@d401c000
 
 **下载源码压缩包**
 
-[spi_test.zip](code/08_spi_test.zip)
+[spi_test.zip](https://cdn-resource.spacemit.com/file/event/08_spi_test.zip)
 
 > **补充**：源码文件具体作用请看压缩包里的 README.md 文件。
 

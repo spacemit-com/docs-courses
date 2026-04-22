@@ -644,7 +644,7 @@ struct i2c_msg {
 
 ### 8.1. 查看模块地址
 
-下载 i2c 工具包：[i2ctools.zip](code/i2ctools.zip)
+下载 i2c 工具包：[i2ctools.zip](https://cdn-resource.spacemit.com/file/event/i2ctools.zip)
 
 执行下面命令解压
 ```bash
@@ -792,7 +792,7 @@ sudo reboot
 
 **下载源码压缩包**
 
-[iic_test.zip](code/06_iic_test.zip)
+[iic_test.zip](https://cdn-resource.spacemit.com/file/event/06_iic_test.zip)
 
 > **补充**：源码文件具体作用请看压缩包里的 README.md 文件。
 

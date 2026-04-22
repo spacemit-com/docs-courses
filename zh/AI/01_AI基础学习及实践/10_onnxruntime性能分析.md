@@ -8,7 +8,7 @@ sidebar_position: 10
 
 在k1上可以使用onnxruntime_perf_test工具测试模型性能，并通过开启profiling功能获取算子级别的性能分析报告。
 
-下载测试模型文件: [yolov6p5_n.q.onnx](code/yolov6p5_n.q.onnx)
+下载测试模型文件: [yolov6p5_n.q.onnx](https://cdn-resource.spacemit.com/file/event/yolov6p5_n.q.onnx)
 
 ```bash
 # example

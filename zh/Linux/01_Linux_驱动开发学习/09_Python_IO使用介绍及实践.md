@@ -52,7 +52,7 @@ Successfully installed colorzero-2.0 gpiozero-2.0.5 lgpio-0.2.2.0 pyserial-3.5 s
 
 以下是对 MUSE Pi Pro引脚说明。
 
-进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://developer.spacemit.com/documentation?token=EIk1wVY9NinD95kMsw0cFM89npd)
+进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
 
 <center>
     <img style="width: 600px; border-radius: 0.3125em;
@@ -124,7 +124,7 @@ Device.pin_factory = LGPIOFactory(chip=0) # 显式指定/dev/gpiochip0
 
 下载源码压缩包：
 
-[Python_IO.zip](code/09_python_io.zip)
+[Python_IO.zip](https://cdn-resource.spacemit.com/file/event/09_python_io.zip)
 
 解压下载回来的压缩包：
 

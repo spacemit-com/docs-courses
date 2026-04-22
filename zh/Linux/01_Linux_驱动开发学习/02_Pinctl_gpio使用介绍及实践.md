@@ -380,7 +380,7 @@ static const struct of_device_id bianbu_pinctrl[] = {
 
 **下载源码压缩包**
 
-[pinctrl_gpio_test.zip](code/02_pinctrl_gpio_test.zip)
+[pinctrl_gpio_test.zip](https://cdn-resource.spacemit.com/file/event/02_pinctrl_gpio_test.zip)
 
 > **补充**：源码文件具体作用请看压缩包里的 README.md 文件。
 
