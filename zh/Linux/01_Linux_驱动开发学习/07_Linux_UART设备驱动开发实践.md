@@ -372,7 +372,7 @@ TOF模块官网资料链接：[https://www.waveshare.net/wiki/TOF_Laser_Range_Se
 
 下载源码压缩包：
 
-[uart_test.zip](code/07_uart_test.zip)
+[uart_test.zip](https://cdn-resource.spacemit.com/file/event/07_uart_test.zip)
 
 解压下载回来的压缩包：
 

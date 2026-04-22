@@ -453,7 +453,7 @@ static irqreturn_t gpio_key_isr(int irq, void *dev_id)
 
 #### 5.3.1. 下载源码压缩包
 
-[irq_test.zip](code/04_irq_test.zip)
+[irq_test.zip](https://cdn-resource.spacemit.com/file/event/04_irq_test.zip)
 
 > **补充**：源码文件具体作用请看压缩包里的 README.md 文件。
 
