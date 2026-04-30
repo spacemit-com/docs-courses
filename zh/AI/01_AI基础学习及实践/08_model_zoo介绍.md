@@ -1,4 +1,4 @@
-﻿sidebar_position: 8
+sidebar_position: 8
 
 # 进迭时空 Model zoo
 
