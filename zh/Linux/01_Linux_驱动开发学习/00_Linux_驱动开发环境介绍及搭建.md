@@ -28,7 +28,7 @@ GPIO 电平域为 3.3V，支持多功能复用，引脚定义和资源如下图�
     <br>
 </center>
 
-进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
+进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_pi_pro/pi_pro_user_guide.md)
 
 
 ## 2. 开发环境搭建
