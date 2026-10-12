@@ -52,7 +52,7 @@ Successfully installed colorzero-2.0 gpiozero-2.0.5 lgpio-0.2.2.0 pyserial-3.5 s
 
 以下是对 MUSE Pi Pro引脚说明。
 
-进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://spacemit.com/community/document/info?lang=zh&nodepath=hardware/eco/k1_muse_pi_pro/pi_pro_user_guide.md)
+进迭时空官方参考链接：[MUSE Pi Pro 用户使用指南](https://spacemit.com/community/document/info?lang=zh&nodepath=ecohardware/k1_series/k1_muse_pi_pro/pi_pro_user_guide.md)
 
 <center>
     <img style="width: 600px; border-radius: 0.3125em;
